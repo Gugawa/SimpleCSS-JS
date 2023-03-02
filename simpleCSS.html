@@ -1,0 +1,38 @@
+<html>
+<head>
+
+	<title>Simple task with css</title>
+	<meta name="author" content="Daniel Zwijacz">
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='style.css'>
+
+</head>
+<body>
+
+<h1>Lorem Ipsum</h1>
+
+<div class="a"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<b></div>
+<div class="b">Nam efficitur, elit ac condimentum auctor, neque est facilisis metus, vitae dictum mauris erat congue dolor.</div>
+<div class="c">Donec velit erat, mattis ut dui ut, efficitur tincidunt dui.</div>
+<div class="d">Ut sit amet euismod mi, ac lacinia ante.</div>
+<div class="e">Proin venenatis neque nec lectus aliquam tincidunt.</div>
+<div class="image f"></div> <!--Image div-->
+<div class="g">Morbi tempus accumsan erat, eget tincidunt magna interdum at.</div>
+<div class="image h"></div> <!--Image div-->
+<div class="i">Praesent volutpat neque quis est accumsan ullamcorper.</div>
+<div class="image j"></div> <!--Image div-->
+<div class="image k"><h2>Lorem Ipsum</h2></div> <!--Image div-->
+</body>
+<script>
+	const imageUrls = [];
+	for (let i = 0; i < 4; i++) {
+		const url = `https://picsum.photos/1280/720?random=${Math.floor(Math.random() * 1000)}`;
+		imageUrls.push(url);
+	}
+
+	const images = document.querySelectorAll('.image');
+	images.forEach((image, index) => {
+		image.style.backgroundImage = `url(${imageUrls[index]})`;
+	});
+</script>
+</html>
